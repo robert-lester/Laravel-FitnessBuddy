@@ -8,18 +8,25 @@
                     <div class="panel-heading">
 
                         <h2>{{ $meals->name }}
-                            <span class="timeForm">{{ date('D, F d, Y', strtotime($meals->created_at)) }}</span>
+                            <span class="timeForm">{{ date('D, F d, Y, T', strtotime($meals->created_at)) }}</span>
                         </h2>
 
-                        @foreach ($meals->foods as $food)
-                            <span class="label label-pill label-primary">
-                                {{ 'Protein: ' . $food->protein . 'g'}}
-                                &nbsp;
-                                {{ 'Carbs: ' . $food->carbohydrates . 'g' }}
-                                &nbsp;
-                                {{ 'Fat: ' . $food->fat . 'g' }}
-                            </span>
-                        @endforeach
+                        <span class="label label-pill label-primary">
+                            {{ $meals->calories() . 'g' . ' Cal' }}
+                        </span>
+                            &nbsp;
+                        <span class="label label-pill label-primary">
+                            {{ $meals->proteins() . 'g'. ' Protein' }}
+                        </span>
+                            &nbsp;
+                        <span class="label label-pill label-primary">
+                            {{ $meals->carbs() . 'g' . ' Carbs' }}
+                        </span>
+                            &nbsp;
+                        <span class="label label-pill label-primary">
+                            {{ $meals->fats() . 'g' . ' Fat' }}
+                        </span>
+                            &nbsp;
 
                     </div>
 
