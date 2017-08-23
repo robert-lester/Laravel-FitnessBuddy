@@ -1,6 +1,6 @@
 # Laravel Fitness-Buddy Tracker
 
-## Check it out [here](http://agile-headland-26365.herokuapp.com/register)!
+## Check it out [here](https://laravel-fitness-buddy.herokuapp.com/)!
 
 #### How it works
 
